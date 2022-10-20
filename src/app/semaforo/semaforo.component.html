@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="semaforo rounded bg-secundary">
+        <div [ngClass]="{rojo: colorSelected=='Rojo', apagado: colorSelected!='Rojo'}" class="circulo"></div>
+        <div [ngClass]="{amarillo: colorSelected=='Amarillo', apagado: colorSelected!='Amarillo'}" class="circulo"></div>
+        <div [ngClass]="{verde: colorSelected=='Verde', apagado: colorSelected!='Verde'}" class="circulo"></div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <h3 style="margin-left: 15px;"><u>Controlador</u></h3>
+    <app-botones (colores)="getColores($event)" (colorSelected)="getColorSeleccted($event)" style="margin-left: 15px;"></app-botones>
+</div>
